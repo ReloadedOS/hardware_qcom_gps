@@ -1,3 +1,4 @@
+ifeq ($(call my-dir),$(call project-path-for,qcom-gps))
 ifneq ($(BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE),)
 
 # Set required flags
@@ -42,3 +43,4 @@ GNSS_SANITIZE := cfi bounds null unreachable integer
 #GNSS_SANITIZE_DIAG := $(GNSS_SANITIZE)
 
 endif # ifneq ($(BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE),)
+endif # pathmap
